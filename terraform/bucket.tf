@@ -25,7 +25,7 @@ resource "yandex_iam_service_account_static_access_key" "sa-static-key" {
 }
 
 // Создание бакета с использованием ключа
-resource "yandex_storage_bucket" "fedorchukds" {
+resource "yandex_storage_bucket" "savilovvv" {
   access_key = yandex_iam_service_account_static_access_key.sa-static-key.access_key
   secret_key = yandex_iam_service_account_static_access_key.sa-static-key.secret_key
   bucket = local.bucket_name
